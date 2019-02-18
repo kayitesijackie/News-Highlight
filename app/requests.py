@@ -50,6 +50,24 @@ def process_results(source_list):
 
     return source_results
 
+def get_articles(id):
+    '''Function thet gets the json response to our url request'''
+    get_articles_url = articles_base_url.format(id,api_key)
+
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
+
+        article_results = None
+
+        if get_articles_response['articles']:
+            article_results_list = get_articles_response['articles']
+            article_results = process_articles(article_results_list)
+
+    return article_results
+
+
+
 
 
 #....
