@@ -1,6 +1,8 @@
+
 {% macro displaySourceList(source_list) %}
 
     {% for source in source_list %}
+   
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <div class="panel" style="border-bottom: 1px solid #000;">
           <div class="panel-heading" style="background-color:#000; color: #fff; font-size: 18px;">{{source.name}}</div>
@@ -26,5 +28,6 @@
             <br>
           <a href="{{article.url}}" target="_blank" class="btn" style="background-color: #000; color: #fff; margin-top: 5px;">Read more...</a>
       </div>
+    
     {% endfor %}
 {% endmacro %}
