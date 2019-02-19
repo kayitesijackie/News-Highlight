@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+<!-- Content block -->
+{% block content %}
+
+<!-- General news sources sections -->
+<h3 class="text-center" style="font-weight: bold; font-size: 28px;">General News</h3>
+<hr><br>
+<div class="row">
+  {{ macro.displaySourceList(general) }}
+</div>
+<br>
+<!-- Business news sources sections -->
+<h3 class="text-center">Business News</h3>
+<hr><br>
+<div class="row">
+  {{ macro.displaySourceList(business) }}
+</div>
+<br>
+<!-- Technology news sources sections -->
+<h3 class="text-center">Technology News</h3>
+<hr><br>
+<div class="row">
+  {{ macro.displaySourceList(technology) }}
+</div>
+<br>
+<!-- Sports news sources sections -->
+<h3 class="text-center">Sports News</h3>
+<hr><br>
+<div class="row">
+  {{ macro.displaySourceList(sports) }}
+</div>
+
+{% endblock %}
