@@ -1,7 +1,6 @@
 import unittest
-from models import article
+from app.models import Article
 
-Article = article.Article
 
 class ArticleTest(unittest.TestCase):
     '''Test class to test the beahviour of the Article class'''
